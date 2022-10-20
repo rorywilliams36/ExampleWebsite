@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "utf-8" >
+        <meta name="author" content="Rory Williams"/>
+        <meta name="copyright" content="Rory Williams">
+        <meta name="description" content="Children's games and puzzles website"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Puzzle Room</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+
+    <body id="wrapper">
+        <header>
+            <img src="logo.svg" alt="Logo" id="logo">
+            <h1>The Puzzle Room</h1>
+            <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+            <label for="dropdown-toggle" aria-hidden="true" class="dropdown-button">&#9776;</label>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About</a></li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a class="active" href="Game.html">Game</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Accessibility.html">Accessiblity</a></li>
+                </ul>
+            </nav> 
+        </header>
+        
+        <main class="text-container border bg-grey">
+            <div>
+                <h2>Game Page</h2>
+                <br>
+                <h3>The Rules</h3>
+                <ul>
+                    <li>3 pictures will appear in random places on the screen</li>
+                    <li>Your job is to pick the right picture to win</li>
+                </ul>
+                <br>
+            </div>
+            <canvas aria-hidden="true" id="game-screen" width="400px" height="400px">Your browser does not support HTML canvas</canvas>
+            <p id="buttons">
+                <button name="Play" id="play-button">Play</button>
+                <button name="Start New" id="reset-button">Restart</button>
+            </p>
+            <p id="questions">Question: </p>
+            <p id="output">Last Result: </p>
+        </main>
+
+        <script src="game.js"></script>
+
+        <footer>
+            <hr>
+            <p>All information, stories and individuals used are fictitous</p>
+            <p>Any enquiries please go to <a href="contact.html">our contact page</a> or email <a href="mailto:rtwilliams1@sheffield.ac.uk">rtwilliams1@sheffield.ac.uk</a></p>
+            <p><a href="Accessibility.html">Accessibility</a></p>
+            <p><a href="https://www.pexels.com/license/">Image Liscence</a></p>
+            <br>
+            <p>&copy; Rory Williams 2021</p> 
+        </footer>
+    </body>
+       
+</html>

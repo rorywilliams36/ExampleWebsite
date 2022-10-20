@@ -1,0 +1,19 @@
+<!-- <!DOCTYPE html>
+<html> -->
+    <!-- <head>
+       Make it look cleaner and RWD
+        <meta charset = "utf-8" >
+        <meta name="author" content="Rory Williams"/>
+        <meta name="description" content="SVG logo element"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>The Puzzle Rooom SVG logo</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+
+    <body> -->
+<svg version="1.1" baseProfile="full" width="75" height="70" xmlns="http://www.w3.org/2000/svg">
+    <rect width="50" height="50" fill="white"/>
+    <circle cx="25" cy="57" r="10" fill="white" />
+    <circle cx="45" cy="25" r="10" fill="rgba(109, 79, 243, 1)"/>
+</svg>
+<!-- </html> -->

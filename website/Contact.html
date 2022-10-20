@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "utf-8" >
+        <meta name="author" content="Rory Williams"/>
+        <meta name="copyright" content="Rory Williams">
+        <meta name="description" content="Children's games and puzzles website"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Puzzle Room</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+
+    <body id="wrapper">
+        <header>
+            <!-- Heading -->
+            <img src="logo.svg" alt="Logo" id="logo">
+            <h1>The Puzzle Room</h1>
+            <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+            <label for="dropdown-toggle" aria-hidden="true" class="dropdown-button">&#9776;</label> 
+            <!-- Navigation -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About</a></li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="Game.html">Game</a></li>
+                    <li><a class="active" href="Contact.html">Contact</a></li>
+                    <li><a href="Accessibility.html">Accessiblity</a></li>
+                </ul>
+            </nav> 
+        </header>
+
+        <main>
+            <!-- Contact Details -->
+            <div class="text-container">
+                <h2>Our Contacts</h2>
+                <br>
+                <ul>
+                    <li><span class="text-bold">Email: </span>rtwilliams1@sheffield.ac.uk</li>
+                    <li><span class="text-bold">Phone Number: </span>07123 234987</li>
+                    <li><span class="text-bold">Address: </span>123 Endcliffe Way, S10 ZER Sheffield</li>
+                </ul>  
+                <br><br>
+                <p>To give us feedback simply fill out the form shown below.</p>
+            </div>
+
+            <!-- Taken from 'COM1008: Web and Internet Technology, Lecture 5: Forms, Vita Lanfranchi' -->
+            <form name="Help and Enquiries" action="https://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.php" method="POST">
+                <input type="hidden" name="recipients" value="rtwilliams1@sheffield.ac.uk">
+                <fieldset>
+                    <legend>Contact Form</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="Name" required>
+                    <br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="Email" required>
+                    <br><br>
+                    <textarea name="Comment" rows="5" cols="40">Put your comments here...</textarea>
+                    <br><br>
+                    <input type="submit" id="submit-button" value="Submit">
+                    <br><br>
+                </fieldset>
+            </form>
+        </main>
+        
+        <footer>
+            <hr>
+            <p>All information, stories and individuals used are fictitous</p>
+            <p>Any enquiries please go to <a href="contact.html">our contact page</a> or email <a href="mailto:rtwilliams1@sheffield.ac.uk">rtwilliams1@sheffield.ac.uk</a></p>
+            <p><a href="Accessibility.html">Accessibility</a></p>
+            <p><a href="https://www.pexels.com/license/">Image Liscences</a></p>
+            <br>
+            <p>&copy; Rory Williams 2021</p> 
+        </footer>
+    </body>
+       
+
+    
+
+</html>

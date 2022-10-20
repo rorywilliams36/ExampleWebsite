@@ -1,0 +1,14 @@
+car: https://www.pexels.com/photo/blue-bmw-sedan-near-green-lawn-grass-170811/
+cat: https://www.pexels.com/photo/photo-of-a-gray-and-white-cat-2928158/
+kids: https://www.pexels.com/photo/boy-wearing-green-crew-neck-shirt-jumping-from-black-stone-on-seashore-939702/
+dog: my own picture
+banana: my own picture
+
+graph: https://www.pexels.com/photo/close-up-photo-of-survey-spreadsheet-590022/
+game controller: https://www.pexels.com/photo/home-game-couch-sofa-4009630/
+
+port 1:https://www.pexels.com/photo/man-smiling-behind-wall-220453/
+port 2: https://www.pexels.com/photo/man-wearing-blue-crew-neck-t-shirt-2379005/
+
+
+liscence: https://www.pexels.com/license/

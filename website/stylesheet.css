@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/*-----------Global-----------------*/
+:root {
+    --heading: rgba(109, 79, 243, 1);
+    --white: #fff;
+    --grey: #ccc;
+    --black: #000;
+    --darkGrey: rgb(40,40,40);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    min-width: 90%;
+    margin: 0 auto;
+}
+
+.text-container {
+    min-width: 90%;
+    max-width: 72rem; 
+    margin: 0 1.2em;
+    padding: 5% 5%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-underline {
+    text-decoration: solid;
+}
+
+.bg-black {
+    background-color: var(--black);
+}
+
+.bg-purple {
+    background-color: var(--heading);
+}
+
+.bg-grey {
+    background: var(--darkGrey);
+}
+
+.border {
+    border: var(--grey) solid 2px;
+    border-radius: 5px;
+}
+
+/*default background and font colour for all content*/
+body {
+    background: var(--black);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white);
+}
+
+/*Makes banner span the width of the page*/
+header {
+    width: 100%;
+    text-align: center;
+    background-color: var(--heading);
+    padding: 1.5rem 2rem;
+    position: sticky;
+    height: 10%;
+    z-index: 999;
+}
+
+/*Makes the heading be on the same line of nav*/
+header h1 {
+    display: inline-block;
+    font-size: 2em;
+    margin-left: 0.7em;
+}
+
+#logo {
+    width: 60px;
+    position: absolute;
+    display: block;
+    align-items: center;
+    top:15px;
+}
+
+@media  screen and (min-width: 768px) {
+    header h1 {
+        margin-left: 3em;
+    }
+
+    body {
+        font-size: 1.05em;
+    }
+}
+
+@media screen and (min-width: 1064px) {
+    body {
+        font-size: 1.15em;
+    }  
+}
+
+/*--------Index----------*/
+
+main {
+    margin-top: 10px;
+}
+
+/*Paragraph under main heading*/
+aside {
+    margin: auto 0;
+}
+
+/*Main heading on the home screen*/
+#Home-Heading {
+    text-align: center;
+    font-size: 1.75em;
+    padding-top: 20%;
+    margin: auto auto;
+}
+
+/* + selects <p> element straight after the id
+in this case the lien under the main heading*/
+#Home-Heading + p {
+    padding: 0 20% 0 15%;
+}
+
+/* #Home-Logo {
+    width: 60px;
+    position: absolute;
+    display: block;
+    align-items: center;
+    left: 5%;
+} */
+
+/*Background is a colour gradient*/
+#gradient {
+    background-image: linear-gradient(var(--heading), var(--darkGrey));
+}
+
+div a {
+    color: var(--white);
+}
+
+/*Tablet and small laptop sizes
+Increases font-sizes and adjusts position of caption*/
+@media screen and (min-width: 768px) {
+    #Home-Heading {
+        font-size: 2em;
+    }
+
+    #Home-Heading + p {
+        padding: 0 20% 0 25%;
+    }
+
+    aside {
+        margin: 6em 0;
+    }
+}
+
+/*Laptop and desktop sizes*/
+@media screen and (min-width: 1064px) {
+    #Home-Heading + p {
+        font-size: 1.1em;
+    }
+
+    aside {
+        margin: 8em;
+    }
+}
+
+/*Much larger screens*/
+@media screen and (min-width: 1180px) {
+    #Home-Heading + p {
+        padding: 0 20% 0 35%;
+    }
+}
+
+/*------------------------------*/
+/*----------Navigation----------*/
+/*------------------------------*/
+
+/*Puts nav on right side of screen*/
+nav {
+    text-align: right;
+    width: 100%;
+}
+
+/*Hides nav links*/
+nav ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*Puts links into a column in dropdown menu*/
+nav li {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Removes the default look of links
+adds a animation where the links takes time to change colour when hovered */
+nav a {
+    text-decoration: none;
+    color:#fff;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+}
+
+/*Indicates the option mouse is over*/
+nav a:hover {
+    color:#000;
+    text-decoration: underline;
+}
+
+/*Hides the checkbox*/
+.dropdown-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/*Makes 'burger' symbol visible*/
+.dropdown-toggle label {
+    background: var(--white);
+    display: flex;
+    position: relative;
+}
+
+/*Once checkbox is 'checked'/clicked nav links appear
+ ~ selects every nav ul which comes after the class */
+.dropdown-toggle:checked ~ nav ul {
+    display: block;
+    align-items: center;
+    background: var(--heading);
+}
+
+/*Position of links in the dropdown menu*/
+.dropdown-toggle:checked ~ nav a {
+    margin: 5px 0;
+    margin-right: 1rem;
+    transition: all 0.3s linear;
+}
+
+/*Puts 'burger' icon into the top-right corner*/
+.dropdown-button {
+    float: right;
+    font-size: 1.5em;
+    display: block;
+    cursor: pointer;
+}
+
+/*Class for the nav on the home/index page*/
+#nav-home {
+    margin: 1em 0;
+}
+
+/*Shows what page user is on in the nav*/
+.active {
+    font-weight: bold;
+}
+
+/*Changes nav from dropdown to a nav bar*/
+@media screen and (min-width: 768px) {
+
+    header {
+        align-items: center;
+        display: flex;
+        padding-right: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    /*Makes Dropdown button disappear once screen is large enough*/
+    .dropdown-button,
+    .dropdown-toggle {
+        display: none;
+    }
+
+    /* all:unset - Resets the nav's attributes so that the nav is rebuilt for larger screens*/
+    nav {
+        all: unset;
+        position: absolute;
+        display: block;
+        align-items: center;
+        font-size: 0.75em;
+        padding-top: 5px;
+        margin: 0 36%;
+    }
+
+    /*Puts links next to eachother horizontally*/
+    nav ul {
+        display: flex;
+    }
+
+    /*Space between each link*/
+    nav li {
+        justify-content: space-around;   
+        margin: 0 10px;
+    }
+
+    /*Nav settings for the home/index page
+    right always ensures that the nav bar is in the middle of the screen*/
+    #nav-home {
+        margin: 0 auto;
+        padding: 0;
+        right: 50%;
+    }
+
+    #nav-home li {
+        margin: 0 7%;
+    }
+}
+
+/*Adjusts spacing and font-sizes of the elements in the nav*/
+@media screen and (min-width: 1080px) {
+    nav {
+        margin: 0 35%; 
+        font-size: 0.9em;
+    }
+
+    nav ul {
+        padding: 0 10%;
+    }
+
+    nav li {
+        margin: 0 5%;
+    }
+}
+
+/*----------------------------*/
+/*----------About Us----------*/
+
+#about-heading {
+    padding: 0 2rem;
+    margin-top: 1em;
+}
+
+.founder-heading {
+   font-size: 1.1em;
+}
+
+.founder-images {
+    border-radius: 200px;
+    width: 150px;
+    margin: 1em 0;
+}
+
+/*Selects elements where section is parent of img-layout*/
+section > .img-layout {
+    padding: 4rem 2rem;
+}
+
+figure {
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 0.4em 0;
+}
+
+/*Puts images in column format where text is under it*/
+.img-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Puts the image besides the text in row format*/
+@media  screen and (min-width: 768px) {
+    
+    #about-heading {
+        font-size: 1.5em;
+    }
+
+    .img-layout {
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+
+    .founder-images {
+        width: 200px;
+    }
+
+    figure {
+        padding: 0;
+        bottom: 5%;
+    }
+
+    div.text-container.img-layout > p {
+        align-items: center;
+        margin: auto 3em;
+    }
+
+    div.text-container.img-layout > div{
+        width: 60%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .founder-images {
+        width: 250px;
+    }
+}
+
+/*----------News--------------*/
+
+article h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.75em;
+    padding: 2rem 1rem; 
+}
+
+article {
+    align-items: center;
+    padding: 0 2rem;
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+/*Removes the 'link look' from text and moves text to side of img*/
+article a {
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+}
+
+
+.news-layout {
+    max-width: 90%;
+    padding: 2rem;
+    display:flex;
+    flex-direction: column;
+}
+
+/*Main article image*/
+.article-img {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    margin:0;
+}
+
+/* The boxes containing the other articles */
+.sub-article {
+    border: 2px solid var(--black);
+    max-height: 150px;
+    flex-direction: row;
+    padding: 0;
+    margin: 1em 0;
+    background-color: var(--darkGrey);
+    box-shadow: 10px;
+    border-radius: 5px;
+}
+
+.sub-article-img {
+    position: relative;
+    width: 100px;
+}
+
+.sub-article h3 {
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 1em;
+    align-items: center;
+    margin: auto 0;
+}
+
+/*Moves article links to the side of the screen using a display grid
+Column 1 = main article, column 2 = box links*/
+@media screen and (min-width: 768px ){
+
+    /* Uses grid layout to display the article boxes on the side column
+    Creates 2 columns where 1 is 70% wide and the other 20% wide
+    Creates 3 rows where 2 are 30% wide and the other 40%*/
+    #news-layout {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 70% 20%;
+        grid-template-rows: 30% 30% 40%;
+        min-width: 95%;
+        padding: 2em 2em;
+        margin: 0 auto;
+    }
+
+    /* Makes items start in the 2nd column*/
+    /*Moves the box links to the side*/
+    .column-2 {
+        grid-column-start: 2;
+    }
+
+
+    /* Makes items start on the 'n' row */
+    .row-1 {
+        grid-row-start: 1;
+    }
+
+    .row-2 {
+        grid-row-start: 2;
+    }
+
+    /*Class for the featured article*/
+    /* Makes the item covers all rows instead of 1 */
+    .main-article {
+        grid-row: span 3;
+    }
+
+    .main-article figure {
+        font-size: 0.8em;
+        padding: 1em 0;
+    }
+
+    .article-img {
+        width: 100%;
+    }
+
+    article a {
+        display:block;
+    }
+
+    .sub-article {
+        width: 12rem;
+    }
+
+    .sub-article h3 {
+        font-size: 0.7em;
+        color:var(--white);
+    }
+
+    #kids-img,
+    #graph-img {
+        max-height: 14rem;
+    }
+
+    #controller-img {
+        max-height: 20rem;
+    }
+
+    .sub-article-img {
+        width: unset;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*Makes the border fill the screen*/
+    .main-article.border {
+        grid-row: span 3;
+        margin: 1em;
+    }
+}
+
+/*Increases font-sizes and adjusts the height of the image*/
+@media screen and (min-width: 1024px) {
+
+    article h2 {
+        font-size: 2em;
+    }
+
+    article p {
+        font-size: 1.1em;
+    }
+
+    .sub-article p {
+        font-size: 0.8em;
+    }
+
+    #controller-img {
+        height: 18rem;
+    }
+}
+
+/*----------------------------*/
+/*------------Form------------*/
+/*----------------------------*/
+
+/*Groups inputs in the form*/ 
+fieldset {
+    position: relative;
+    border-radius: 1rem;
+    background-color: var(--darkGrey);
+    font-size: 1.1em;
+}
+
+form, 
+fieldset {
+    padding: 1.25rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+/*Large text box for feedback*/
+textarea {
+    width: 85%;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+/*Text boxes used for name and email*/
+input[type=text],
+input[type=email] {
+    width: 50%;
+    padding: 0.2em 0.2em;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    border: 3px solid var(--black);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#submit-button {
+    background-color: rgb(40, 40, 255);
+    color:var(--white);
+    border: thin var(--white);
+    border-radius: 5px;
+    padding: 0.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    padding: 0.6em;
+    font-size: 0.75em;
+}
+
+/*Increases font-sizes and sizes of the input boxes*/
+@media screen and (min-width: 768px) {
+    .text-container,
+    form {
+        padding: 1rem 7%;
+    }
+
+    .text-container {
+        font-size: 1.15em;
+    }
+
+    fieldset {
+        max-width: 55em;
+        font-size: 1.2em;
+        padding: 1rem 5%;
+    }
+
+    input[type=text],
+    input[type=email] {
+        max-width: 30em;
+    }
+
+    textarea {
+        max-width: 40em
+    }
+
+    #submit-button {
+        padding: 0.75em;
+        font-size: 0.9em;
+        border-radius: 10px;
+    }
+    #submit-button:hover {
+        padding: 0.85em;
+        font-size: 1em;
+    }
+}
+
+/*---------------------------*/
+/*----------Game-------------*/
+
+/* Canvas Position */
+canvas { 
+    position: relative;
+    background-color: var(--white);
+    margin: 0 auto;
+}
+
+#buttons {
+    margin-bottom: 5rem;
+}
+
+#play-button,
+#reset-button {
+    background-color: var(--heading);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.5em;
+    border: thin var(--white);
+    border-radius: 8px;
+    padding: 0.75em 1.8em;
+    cursor: pointer;
+    text-align: center;
+    z-index: 999;
+    margin: 1em;
+    bottom: 5%;
+}
+
+/*Play on the right side*/
+#play-button {
+    left: 10%;
+}
+
+/*Reset on the left side*/
+#reset-button {
+    left: 20%;
+    padding: 0.75em 1.25em;
+}
+
+#play-button:hover,
+#reset-button:hover {
+    font-size: 1.6em;
+}
+
+#game-screen {
+    margin: auto 5%;
+}
+
+/*Moves the buttons to the left side of the screen*/
+@media screen and (min-width: 768px){
+    canvas {
+        right: 55%;
+        display: flex;
+    }
+
+    canvas + p {
+        bottom: 10%;
+        position: absolute;
+    }
+
+    #play-button,
+    #reset-button {
+        margin: unset;
+    }
+
+    #play-button {
+        position: relative;
+        left:unset;
+    }
+
+    p#buttons > #reset-button {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 0;
+        position: relative;
+        left: unset;
+    }
+
+    #game-screen {
+        left: 20%;
+    }
+    @media screen and (min-height: 800px) {
+        canvas + p {
+            bottom: 20%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #game-screen {
+        left: 40%;
+    }
+
+
+    /* Since the button position only works with absolute the buttin always tries to remain on the screen 
+    so i media the height to try and make the button chnage with the height of the screen */
+    @media screen and (min-height: 750px) {
+        canvas + p {
+            bottom: 20%;
+        }
+    }
+    @media screen and (min-height: 875px) {
+        canvas + p {
+            bottom: 30%;
+        }
+    }
+}
+
+/*---------------------*/
+/*----Accessibility----*/
+/*---------------------*/
+
+/*Sub-headings*/
+.access-heading {
+    margin: 1em 0;
+    text-decoration: underline;
+}
+
+.access-list li {
+    margin: 0 2em;
+}
+
+/*Links in the p element where id is access-heading*/
+.access-heading + p > a {
+    font-weight: bold;
+    color: var(--white);
+}
+
+/*Element main which has the classes text-container and bg-grey attached*/
+main.text-container.bg-grey {
+    margin-top: 2em;
+    align-items: center;
+    width:90%;
+}
+
+footer {
+    bottom: 100%;
+    font-size: 0.8em;
+    align-items: center;
+    margin: 0 10px;
+}
+
+footer a {
+    color: var(--white);
+}
+
+
